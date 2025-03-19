@@ -22,7 +22,7 @@ A clean and interactive profile section showcasing personal details, skills, and
 <br></br>
 
 ## 📷 Screenshot
-![Profile Section Preview](your-screenshot-url)
+![Profile Section Preview](https://github.com/Mubeen-Channa/khushkuro/blob/fb3094b1cf4d21cf00d5a4aea53b97087da55d4f/One%20Page%20Portfolio.png)
 <br></br>
 
 ## 📞 Contact Me

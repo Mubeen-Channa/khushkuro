@@ -1,30 +1,35 @@
 const texts = ["Mubeen Channa", "Full Stack Developer", "React-Native Developer"];
 let textIndex = 0;
 let charIndex = 0;
-const speed = 100; // Typing speed in milliseconds
+const speed = 100;
+
 
 function typeEffect() {
-    if (charIndex < texts[textIndex].length) {
+    if ( charIndex < texts[textIndex].length ) {
         document.getElementById("typed-text").textContent += texts[textIndex].charAt(charIndex);
         charIndex++;
         setTimeout(typeEffect, speed);
-    } else {
-        setTimeout(eraseEffect, 1500); // Pause before erasing
+    }
+    else {
+        setTimeout(eraseEffect, 1500);
     }
 }
 
+
 function eraseEffect() {
     if (charIndex > 0) {
-        document.getElementById("typed-text").textContent = texts[textIndex].substring(0, charIndex - 1);
+        document.getElementById("typed-text").textContent = texts[textIndex].substring(0, charIndex-1);
         charIndex--;
-        setTimeout(eraseEffect, speed / 2);
-    } else {
-        textIndex = (textIndex + 1) % texts.length; // Move to next text
+        setTimeout(eraseEffect, speed/2);
+    }
+    else {
+        textIndex = (textIndex+1) % texts.length;
         setTimeout(typeEffect, speed);
     }
 }
 
 window.onload = typeEffect;
+
 
 /* Dark Mode Toggle */
 const darkModeToggle = document.getElementById("dark-mode-toggle");
